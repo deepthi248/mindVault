@@ -12,7 +12,7 @@ app.use(cors()); //  allows frontend to call backend
 // const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 const PORT = process.env.PORT || 3000;
 
-app.get("https://mindvault-icca.onrender.com/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("server is running");
 });
 
@@ -43,7 +43,7 @@ const dummy_ai_response = {
   ],
 };
 
-app.post("https://mindvault-icca.onrender.com/api/analyse_text", async (req, res) => {
+app.post("/api/analyse_text", async (req, res) => {
   try {
     const { content } = req.body;
     // console.log('IO am inisde analyse note back end ', content)
@@ -157,7 +157,7 @@ const extractJson = (text) => {
   return JSON.parse(cleaned);
 };
 
-app.post("https://mindvault-icca.onrender.com/api/export-note-pdf", async (req, res) => {
+app.post("/api/export-note-pdf", async (req, res) => {
   let browser;
   try {
     browser = await puppeteer.launch({
