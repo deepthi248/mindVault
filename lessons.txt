@@ -1,0 +1,39 @@
+1.  css file not picking variables from styletheme
+A.  must be in same folder and both are linked to html; 
+    always theme first loaded then the usage file
+
+2. Linear gradient not applying to the button
+A. never apply gradient to background color, apply it to background itself;
+   buttons with gradients dont generally need borders 
+
+3.there is a horizantal scroll to the screen 
+A. add  box-sizing: border-box; margin: 0px; to avoid it
+
+4.If the server is not restarting by itself (backend)
+A. install nodemon/ equivalent 
+
+5. when bad request 
+A. 1. check for auth tokens 
+
+
+6.When the functn is returning an obbject and its undefimed
+A. Most common mistake is to check the returning objec name - 
+catching object prop name is same as retutning object prop name 
+
+7. when assigning the same element in js into two container - you need to add clones 
+Eg:       const containers = [ct_container_1, ct_container_2];
+      containers.forEach((curr) => curr.appendChild(tag_card.cloneNode(true)));
+
+-- TO LEARN 
+
+1. 
+
+-- TO LEARN 
+Object.assign(current_note, updates, {
+    date_updated: new Date().toISOString(), //current date
+  });
+
+CSS MAIN POINTS 
+1. flex: 1 what ever space is available take it
+2. min-width: 0; allows the section/ element to shrink 
+3.

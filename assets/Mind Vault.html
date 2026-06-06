@@ -1,47 +1,28 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en" suppresshydrationwarning="true" data-qb-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mind Vault</title>
-    <link rel="stylesheet" href="./styles/styleTheme.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/overlay_ui.css" />
-    <link rel="stylesheet" href="./styles/mobile_ui.css" />
+    <link rel="stylesheet" href="./Mind Vault_files/styleTheme.css">
+    <link rel="stylesheet" href="./Mind Vault_files/style.css">
+    <link rel="stylesheet" href="./Mind Vault_files/overlay_ui.css">
 
-    <script type="module" src="./js/app.js"></script>
-  </head>
-  <body>
-    <div class="mobile_menu_container">
-      <div class="mobile_header">
-        <img src="./assets/final_logo.png" class="mobile_logo" />
-      </div>
-    </div>
-    <div class="mobile_overlay hidden"></div>
-      <span class="mobile_all_notes_heading">NOTES</span>
-      <div class="mobile_all_notes_container"></div>
-    </div>
-
+    <script type="module" src="./Mind Vault_files/app.js"></script>
+  <link rel="stylesheet" href="chrome-extension://paodpkkacimmkacaecjmhdncjgjepcai/content-static.css"><script src="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/js/recordConsoleEvents.js"></script></head>
+  <body data-new-gr-c-s-check-loaded="14.1297.0" data-gr-ext-installed="">
     <div class="content_section">
       <div class="side_bar">
         <!-- Logo  -->
         <div class="side_logo_div">
-          <img
-            src="./assets/final_logo.png"
-            class="side_logo"
-            alt="alternatetext"
-          />
+          <img src="./Mind Vault_files/final_logo.png" class="side_logo" alt="alternatetext">
         </div>
         <!-- Add new Note -->
         <!-- Needs + symbol -->
         <button class="new_note_button">➕ New Note</button>
         <!-- Search for Input -->
         <!-- needs search button symbol here -->
-        <input
-          type="text"
-          id="search_notes"
-          placeholder="🔍 Search Notes...."
-        />
+        <input type="text" id="search_notes" placeholder="🔍 Search Notes....">
         <!-- View all Notes -->
         <div class="side_bar_middle">
           <div class="view_notes_section">
@@ -64,34 +45,29 @@
             </div>
           </div>
         </div>
-        <button class="toggle_button hidden" onclick="toggle_mode()"></button>
+        <!-- Dark Mode Button -->
+        <!-- need dark mode and light mode icons -->
+        <button class="toggle_button" onclick="toggle_mode()"></button>
       </div>
 
-      <div class="editor_section hidden">
+      <div class="editor_section">
         <div class="editor_header">
           <div class="title_section">
-            <input
-              type="text"
-              id="note_title"
-              placeholder="Enter Note Title..."
-            />
-            <p id="note_date_updated"></p>
+            <input type="text" id="note_title">
+            <p id="note_date_updated">Updated on May 29, 2026</p>
           </div>
 
           <div class="edit_note_buttons">
             <div class="favorite_note_container">
-              <img id="favorite_note_toggle" />
+              <img id="favorite_note_toggle" src="./Mind Vault_files/star_cement.png">
             </div>
-            <button class="delete_note_button"></button>
+            <button class="delete_note_button">🗑️ delete</button>
           </div>
         </div>
         <div class="content_body">
           <div class="editor_body">
             <div class="note_edit_section">
-              <textarea
-                class="note_text_area"
-                placeholder="Write your notes here...!!"
-              ></textarea>
+              <textarea class="note_text_area" placeholder="Write your notes here...!!"></textarea>
               <div class="note_stats">
                 <div>
                   <span id="lines_count"></span>
@@ -131,17 +107,16 @@
               <span class="tc_heading">TAGS</span>
               <span class="tc_sub_heading">No Tags are added to this note</span>
               <button class="cn_add_tag_button hidden">
-                <img src="./assets/plus.png" alt="" class="cn_add_icon" /> Add
+                <img src="./Mind Vault_files/plus.png" alt="" class="cn_add_icon"> Add
                 Tag
               </button>
-              <div class="ct_container_1"></div>
+              <div class="ct_container"></div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="manage_tags_section">
-        <div class="back_to_note_button">< Back to Note</div>
+      <div class="manage_tags_section hidden">
+        <div class="back_to_note_button">&lt; Back to Note</div>
 
         <div class="manage_tags_header">
           <div class="mt_heading_section">
@@ -154,22 +129,16 @@
         </div>
 
         <div class="mt_input_section">
-          <input
-            type="text"
-            class="search_tags"
-            placeholder="🔍  Search Tags...."
-          />
+          <input type="text" class="search_tags" placeholder="🔍  Search Tags....">
         </div>
         <div class="cn_tags_container">
           <div class="cn_heading">Current Note Tags</div>
-          <div class="ct_container_2"></div>
+          <div class="cn_tags"></div>
         </div>
+        <div class="section_divider"></div>
 
         <div class="manage_tags_body">
-          <div class="section_divider"></div>
-
           <div class="mt_heading sub">All Tags</div>
-          <div class="display_all_tags"></div>
         </div>
       </div>
     </div>
@@ -189,29 +158,6 @@
       </div>
     </div>
 
-    <div class="mobile_footer">
-      <div class="footer_function mobile_notes_tab">
-        <img src="./assets/list.png" alt="list" class="mobile_footer_icon" />
-        <div class="span">All Notes</div>
-      </div>
-      <div class="footer_function mobile_ai_tab">
-        <img src="./assets/ai.png" alt="ai" class="mobile_footer_icon" />
-        <div class="span">AI insights</div>
-      </div>
-      <div class="footer_function mobile_tags_tab">
-        <img src="./assets/tag.png" alt="tags" class="mobile_footer_icon" />
-        <div class="span">Tags</div>
-      </div>
-      <div class="footer_function mobile_favs_tab">
-        <img
-          src="./assets/star_cement.png"
-          alt="star"
-          class="mobile_footer_icon"
-        />
-        <div class="span">Favs</div>
-      </div>
-    </div>
-
     <div class="tag_modal hidden">
       <div class="modal_box">
         <div class="cm_header">
@@ -220,7 +166,7 @@
         </div>
         <div class="cm_input_section">
           <span class="cm_input_heading">Tag Name</span>
-          <input type="text" class="cm_input" placeholder="work" />
+          <input type="text" class="cm_input" placeholder="work">
           <span class="is_name_valid"></span>
         </div>
         <div class="tag_color_section">
@@ -236,41 +182,13 @@
 
     <div class="toast_body hidden"></div>
 
-    <template id="tag_card_template">
-      <div class="tag_card">
-        <div class="tag_details">
-          <div class="tag_color_icon"></div>
-          <div class="tag_name"></div>
-        </div>
-
-        <div class="tags_button_sec">
-          <button class="tag_edit_button">
-            <img src="./assets/edit.png" class="tag_action_icon" /><span
-              class="tag_edit_label"
-            ></span>
-          </button>
-          <div class="vertical_divider"></div>
-          <button class="tag_delete_button">
-            <img src="./assets/delete.png" class="tag_action_icon" /><span
-              class="tag_delete_label"
-            ></span>
-          </button>
-          <div class="vertical_divider"></div>
-
-          <button class="tag_add_button">
-            <img src="./assets/plus.png" class="tag_action_icon" /><span
-              class="tag_add_label"
-            ></span>
-          </button>
-        </div>
-      </div>
-    </template>
+    <template id="tag_card_template"></template>
 
     <div class="delete_tag_modal hidden">
       <div class="modal_box">
         <div class="dt_header">
           <div class="dt_heading">Delete Tag</div>
-          <img class="dt_close" src="./assets/clear.png" />
+          <img class="dt_close" src="./Mind Vault_files/clear.png">
         </div>
         <div class="dt_modal_body">
           <div class="delete_message">
@@ -287,5 +205,64 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
