@@ -1,6 +1,7 @@
 
 export const exportNotePDF = async (note) => {
-  const response = await fetch("http://localhost:3000/api/export-note-pdf", {
+  const url ="https://mindvault-icca.onrender.com/api/export-note-pdf"
+  const response = await fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

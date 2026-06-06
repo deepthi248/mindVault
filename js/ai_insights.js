@@ -2,7 +2,7 @@
 export const analyseNote = async (note) => {
   try {
     const content = note.content;
-    const url = "http://localhost:3000/api/analyse_text";
+    const url = "https://mindvault-icca.onrender.com/api/analyse_text";
     const body = JSON.stringify({ content });
     const header = {
       "Content-Type": "application/json",
