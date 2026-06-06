@@ -10,13 +10,14 @@ app.use(express.json());
 app.use(cors()); //  allows frontend to call backend
 
 // const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
+const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
   res.send("server is running");
 });
 
-app.listen(3000, () => {
-  console.log("server is running at http://localhost:3000");
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
 
 const dummy_ai_response = {
